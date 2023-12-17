@@ -1,6 +1,4 @@
-﻿using DataStructures.Stack;
-
-namespace DataStructures.Tests;
+﻿namespace DataStructures.Tests;
 
 public class CustomStackTests
 {

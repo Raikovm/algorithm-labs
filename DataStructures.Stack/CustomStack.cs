@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace DataStructures.Stack;
+﻿namespace DataStructures.Stack;
 
 public class CustomStack<T> : IEnumerable<T>
 {
