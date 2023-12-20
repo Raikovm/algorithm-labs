@@ -2,22 +2,13 @@
 
 public class CustomQueue<T> : IEnumerable<T>
 {
-    private T[] array = new T[16];
-    private int head = 0;
-    private int tail = 0;
+    private CustomLinkedList<T> list = new();
 
-    public int Count { get; private set; }
+    public int Count => list.Count;
 
     public void Enqueue(T item)
     {
-        if (Count == array.Length)
-        {
-            Resize();
-        }
-
-        array[tail] = item;
-        tail = (tail + 1) % array.Length;
-        Count++;
+        list.AddLast(item);
     }
 
     public T Dequeue()
@@ -25,10 +16,17 @@ public class CustomQueue<T> : IEnumerable<T>
         if (Count == 0)
             throw new InvalidOperationException("Queue is empty");
 
-        T item = array[head];
-        head = (head + 1) % array.Length;
-        Count--;
+        T item = list.First() ?? throw new InvalidOperationException();
+        list.Remove(item);
+        return item;
+    }
 
+    public T Dequeue(T item)
+    {
+        if (Count == 0)
+            throw new InvalidOperationException("Queue is empty");
+
+        list.Remove(item);
         return item;
     }
 
@@ -37,27 +35,17 @@ public class CustomQueue<T> : IEnumerable<T>
         if (Count == 0)
             throw new InvalidOperationException("Queue is empty");
 
-        return array[head];
+        return list.First() ?? throw new InvalidOperationException();
     }
 
-    private void Resize()
+    public void Clear()
     {
-        T[] newArray = new T[array.Length * 2];
-
-        for (int i = 0; i < Count; i++) {
-            newArray[i] = array[(head + i) % array.Length];
-        }
-
-        array = newArray;
-        head = 0;
-        tail = Count;
+        list = new CustomLinkedList<T>();
     }
 
     public IEnumerator<T> GetEnumerator()
     {
-        for (int i = head; i < head + Count; i++) {
-            yield return array[i % array.Length];
-        }
+        return list.GetEnumerator();
     }
 
     IEnumerator IEnumerable.GetEnumerator()
