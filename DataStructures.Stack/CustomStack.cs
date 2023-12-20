@@ -3,31 +3,42 @@
 public class CustomStack<T> : IEnumerable<T>
 {
     private T[] array = new T[16];
-    public int Size { get; private set; }
+    public int Count { get; private set; }
 
     public void Push(T item)
     {
-        if (Size == array.Length)
+        if (Count == array.Length)
         {
-            Array.Resize(ref array, array.Length * 2);
+            Resize();
         }
 
-        array[Size++] = item;
+        array[Count++] = item;
     }
 
     public T Pop() =>
-        Size == 0
+        Count == 0
             ? throw new InvalidOperationException("Stack is empty")
-            : array[--Size];
+            : array[--Count];
 
     public T Peek() =>
-        Size == 0
+        Count == 0
             ? throw new InvalidOperationException("Stack is empty")
-            : array[Size - 1];
+            : array[Count - 1];
+
+    private void Resize()
+    {
+        T[] newArray = new T[array.Length * 2];
+
+        for (int i = 0; i < Count; i++) {
+            newArray[i] = array[i];
+        }
+
+        array = newArray;
+    }
 
     public IEnumerator<T> GetEnumerator()
     {
-        for (int i = Size - 1; i >= 0; i--)
+        for (int i = Count - 1; i >= 0; i--)
         {
             yield return array[i];
         }

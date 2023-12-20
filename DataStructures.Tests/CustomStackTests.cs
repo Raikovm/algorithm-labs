@@ -9,7 +9,7 @@ public class CustomStackTests
 
         stack.Push(1);
 
-        stack.Size.Should().Be(1);
+        stack.Count.Should().Be(1);
     }
 
     [Fact]
@@ -20,7 +20,7 @@ public class CustomStackTests
 
         stack.Pop();
 
-        stack.Size.Should().Be(0);
+        stack.Count.Should().Be(0);
     }
 
     [Fact]
@@ -60,6 +60,16 @@ public class CustomStackTests
         var result = stack.ToArray();
 
         result.Should().BeEquivalentTo(new [] {1, 3});
+    }
 
+    [Fact]
+    public void Queue_AddALot()
+    {
+        var stack = new CustomStack<int>();
+        var items = Enumerable.Range(0, 100).ToList();
+
+        items.ForEach(stack.Push);
+
+        stack.ToList().Should().BeEquivalentTo(items);
     }
 }
