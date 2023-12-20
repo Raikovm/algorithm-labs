@@ -87,9 +87,9 @@ public class CustomLinkedList<T> : IEnumerable<T>
         return false;
     }
 
-    public T? Last() => tail != null? tail.Value : default;
+    public T? Last() => tail != null ? tail.Value : default;
 
-    public T? First() => head != null? head.Value : default;
+    public T? First() => head != null ? head.Value : default;
 
 
     public IEnumerator<T> GetEnumerator()

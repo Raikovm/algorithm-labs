@@ -73,9 +73,9 @@ public class CustomQueueTests
         queue.Dequeue();
         queue.Enqueue(5);
 
-       var results = queue.ToArray();
+        var results = queue.ToArray();
 
-       results.Should().BeEquivalentTo(new [] { 3, 4, 5 });
+        results.Should().BeEquivalentTo(new[] { 3, 4, 5 });
     }
 
     [Fact]

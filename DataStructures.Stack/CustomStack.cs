@@ -29,7 +29,8 @@ public class CustomStack<T> : IEnumerable<T>
     {
         T[] newArray = new T[array.Length * 2];
 
-        for (int i = 0; i < Count; i++) {
+        for (int i = 0; i < Count; i++)
+        {
             newArray[i] = array[i];
         }
 

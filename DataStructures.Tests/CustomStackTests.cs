@@ -59,7 +59,7 @@ public class CustomStackTests
 
         var result = stack.ToArray();
 
-        result.Should().BeEquivalentTo(new [] {1, 3});
+        result.Should().BeEquivalentTo(new[] { 1, 3 });
     }
 
     [Fact]
