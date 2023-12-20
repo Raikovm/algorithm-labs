@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures.Stack", "Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures.Queue", "DataStructures.Queue\DataStructures.Queue.csproj", "{9EEBDBEB-281E-4259-921F-668498173159}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudy", "CaseStudy\CaseStudy.csproj", "{D64EAE93-9065-471C-9DEF-194D716C45E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{9EEBDBEB-281E-4259-921F-668498173159}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EEBDBEB-281E-4259-921F-668498173159}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EEBDBEB-281E-4259-921F-668498173159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D64EAE93-9065-471C-9DEF-194D716C45E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D64EAE93-9065-471C-9DEF-194D716C45E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D64EAE93-9065-471C-9DEF-194D716C45E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D64EAE93-9065-471C-9DEF-194D716C45E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
