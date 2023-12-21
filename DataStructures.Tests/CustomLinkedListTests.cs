@@ -60,6 +60,20 @@ public class CustomLinkedListTests
         result.Should().Be(1);
     }
 
+    [Fact]
+    public void InsertAfter_InsertsAfterSpecifiedNode()
+    {
+        var list = new CustomLinkedList<int>();
+        list.AddLast(1);
+        list.AddLast(2);
+        list.AddLast(3);
+
+        var node = list.Find(2);
+
+        list.InsertAfter(node, 4);
+
+        list.ToArray().Should().BeEquivalentTo(new[] { 1, 2, 4, 3 });
+    }
 
     [Fact]
     public void ToArray_PrePopulated_MustBeEquivalent()

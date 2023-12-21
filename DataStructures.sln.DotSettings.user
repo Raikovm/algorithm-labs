@@ -4,6 +4,12 @@
     &lt;TestId&gt;xUnit::24775886-48A6-4BAA-940C-50DF3A36CA5B::net7.0::DataStructures.Tests.CustomLinkedListTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::24775886-48A6-4BAA-940C-50DF3A36CA5B::net7.0::DataStructures.Tests.CustomStackTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::24775886-48A6-4BAA-940C-50DF3A36CA5B::net7.0::DataStructures.Tests.CustomQueueTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::154BA95B-457D-4022-92B8-1FF5B74E39FB::net8.0::BinaryTree.Tests.BinarySearchTreeTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=550c8135_002D013b_002D407a_002Da2e7_002Ddf3f23779b7c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="InsertAfter_InsertsAfterSpecifiedNode" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::24775886-48A6-4BAA-940C-50DF3A36CA5B::net7.0::DataStructures.Tests.CustomLinkedListTests.InsertAfter_InsertsAfterSpecifiedNode&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

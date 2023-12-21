@@ -39,6 +39,27 @@ public class CustomLinkedList<T> : IEnumerable<T>
         Count++;
     }
 
+    public void InsertAfter(CustomLinkedListNode<T> node, T value)
+    {
+        CustomLinkedListNode<T> newNode = new(value);
+
+        if (node.Next == null)
+        {
+            node.Next = newNode;
+            newNode.Previous = node;
+            tail = newNode;
+        }
+        else
+        {
+            newNode.Next = node.Next;
+            node.Next.Previous = newNode;
+            node.Next = newNode;
+            newNode.Previous = node;
+        }
+
+        Count++;
+    }
+
     public CustomLinkedListNode<T>? Find(T value)
     {
         CustomLinkedListNode<T>? current = head;
