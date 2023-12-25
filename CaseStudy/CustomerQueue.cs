@@ -19,8 +19,6 @@ public class CustomerQueue : CustomQueue<Customer>
 
     public void Close()
     {
-        var customers = this.ToArray();
-
         IsClosed = true;
         OpeningAt = WorksUntil + Random.Shared.Next(openingTimeRange.Min, openingTimeRange.Max);
         Clear();

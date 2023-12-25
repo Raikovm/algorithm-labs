@@ -2,7 +2,7 @@
 
 string dataPath = $"{Environment.CurrentDirectory}/Files/";
 
-List<string> files = Directory.GetFiles(dataPath).ToList()!;
+List<string> files = Directory.GetFiles(dataPath).ToList();
 
 foreach (var file in files)
 {
@@ -10,7 +10,7 @@ foreach (var file in files)
     Console.WriteLine(file);
     if (tree.Root is null)
     {
-        Console.WriteLine("No tree is empty");
+        Console.WriteLine("Tree is empty");
         continue;
     }
 
